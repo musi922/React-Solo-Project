@@ -31,6 +31,12 @@ function App() {
           setCount(count-1)
         }
        }
+       function handleReset() {
+        if (count>0) {
+          setCount(0)
+        }
+        
+       }
 
   return (
    <>
@@ -40,6 +46,7 @@ function App() {
             <div className='flex gap-6'>
             <button onClick={handleAdd}>Increase me</button>
             <button onClick={handledecrease}>Decrease me</button>
+            <button onClick={handleReset}>Reset me</button>
 
             </div>
         </div>
