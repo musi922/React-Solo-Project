@@ -20,19 +20,23 @@ function App() {
 
 //   }
       
-       const [increase,setIncrease] = useState(0)
+       const [count,setCount] = useState(0)
        function handleAdd() {
-        setIncrease(increase + 1)
+
+        setCount(count + 1)
        }
+       //i can use callback function here is same as the top one
        function handledecrease() {
-        setIncrease(increase - 1)
+        if (count >= 1) {
+          setCount(count-1)
+        }
        }
 
   return (
    <>
      <div className="container">
             {/* <img src={image}/> */}
-            <h1>{increase}</h1>
+            <h1>{count}</h1>
             <div className='flex gap-6'>
             <button onClick={handleAdd}>Increase me</button>
             <button onClick={handledecrease}>Decrease me</button>
