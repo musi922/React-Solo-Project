@@ -31,7 +31,10 @@ function App() {
           setCount(count-1)
         }
        }
-       
+       function handleReset() {
+        if (count>0) {
+          setCount(0)
+        }
         
        }
 
